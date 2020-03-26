@@ -7,19 +7,27 @@ Use the NSFG respondent variable `numkdhh` to construct the actual distribution 
 Now compute the biased distribution we would see if we surveyed the children and asked them how many children under 18 (including themselves) are in their household.
 
 Plot the actual and biased distributions, and compute their means.
+```python
+numkdhh_pmf = thinkstats2.Pmf(resp.numkdhh, label='numkdhh')
+```
+```python
+numkdhh_biased_pmf = thinkstats2.Pmf(resp.numkdhh, label='numkdhh')
+for x in numkdhh_biased_pmf:  
+    numkdhh_biased_pmf[x] *= x  
+numkdhh_biased_pmf.Normalize()
+```
+>>1.024205155043831
+```python
+thinkplot.Pmfs([numkdhh_pmf,numkdhh_biased_pmf])
+```
 
->numkdhh_pmf = thinkstats2.Pmf(resp.numkdhh, label='numkdhh')
-
->numkdhh_biased_pmf = thinkstats2.Pmf(resp.numkdhh, label='numkdhh')
->for x in numkdhh_biased_pmf:
->    numkdhh_biased_pmf[x] *= x
->numkdhh_biased_pmf.Normalize()
+```python
+numkdhh_pmf.Mean()
+```
 >>1.024205155043831
 
->thinkplot.Pmfs([numkdhh_pmf,numkdhh_biased_pmf])
-
->numkdhh_pmf.Mean()
->>1.024205155043831
-
->numkdhh_biased_pmf.Mean()
+```python
+numkdhh_biased_pmf.Mean()
+```
 >>2.403679100664282
+
