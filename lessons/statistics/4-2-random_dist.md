@@ -11,3 +11,5 @@ thinkplot.Pmfs([thinkstats2.Pmf(rnd1000)])
 ```python
 thinkplot.Cdfs([thinkstats2.Cdf(rnd1000)])
 ```
+
+The distribution is uniform
