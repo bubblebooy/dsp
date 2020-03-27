@@ -94,7 +94,7 @@ the probability that Elvis was an identical twin is 29.4%
 ### Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
-> 
+> Bayesian uses piror knowledge about the data, frequentist sample the data 
 
 ---
 
